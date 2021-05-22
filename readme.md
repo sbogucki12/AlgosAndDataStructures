@@ -1,0 +1,1 @@
+﻿This is a repository to store solutions to various coding challenges, as I complete them. 

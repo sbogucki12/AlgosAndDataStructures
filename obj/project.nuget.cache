@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "gE/ZP9sV6f+hNAYbNBfXIEaOkGVc4vHBn/5TcrPS7iwsH4qGG1JY/u2FCP91SiDhWmGhE4io7qjxlelcirU3Rw==",
+  "success": true,
+  "projectFilePath": "D:\\sbogu\\Documents\\Repos\\VisualStudio2019\\AlgosAndDataStructures\\AlgosAndDataStructures.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sbogu\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.5\\microsoft.netcore.app.host.win-x64.5.0.5.nupkg.sha512",
+    "C:\\Users\\sbogu\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\sbogu\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\sbogu\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
