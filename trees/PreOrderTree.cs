@@ -6,19 +6,6 @@ using System.Threading.Tasks;
 
 namespace AlgosAndDataStructures.trees
 {
-
-    public class TreeNode
-    {
-        public int val;
-        public TreeNode right, left; 
-        public TreeNode(int val = 0, TreeNode left = null, TreeNode right = null)
-        {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
-
     // Directions: 
 
     // Given the root of a binary tree, return the preorder traversal of its nodes' values.
