@@ -11,7 +11,7 @@ namespace AlgosAndDataStructures.trees
     // Given the root of a binary tree, return the preorder traversal of its nodes' values.
 
     // Pre-order: 1. Visit root. 2. Traverse left subtree. 3. Traverse right subtree. 
-    public class PreOrderTree
+    public class TreePreOrder
     {
         public IList<int> PreorderTraversal(TreeNode root)
         {
