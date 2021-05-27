@@ -28,4 +28,9 @@
 
 <p>Also, post-order is widely use in mathematical expression."</i></p>
 
+## Level-order Traversal
+
+<p><b>Breadth First Search:</b> 1. Visit root node. 2. Travese its neighbors. 3. Traverse its second level neighbors. 4, et. al: And so on...</p>
+
+<p><i>Per <a href="https://leetcode.com/explore/learn/card/data-structure-tree/134/traverse-a-tree/990/" target="_blank">leetcode</a>, "Typically, we use a queue to help us to do BFS."</p>
 

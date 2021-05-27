@@ -1,5 +1,12 @@
 ﻿This is a repository to store solutions to various coding challenges, as I complete them. 
 
+## May 27, 2021
+
+<p>Level Order Traversal</p>
+<p><img src="https://raw.githubusercontent.com/sbogucki12/AlgosAndDataStructures/main/readmeImages/levelOrderTraversal.jpg" /></p>
+<p><img src="https://raw.githubusercontent.com/sbogucki12/AlgosAndDataStructures/main/readmeImages/levelOrderTraversal1.jpg" /></p>
+
+
 ## May 26, 2021
 
 <p>Building out the tree class</p>

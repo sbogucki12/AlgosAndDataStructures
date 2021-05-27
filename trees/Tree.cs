@@ -87,5 +87,41 @@ namespace AlgosAndDataStructures.trees
             }
             return helperMethod(root, result);
         }
+
+        public IList<IList<int>> LevelOrderTraversal(TreeNode root)
+        {
+            List<IList<int>> result = new List<IList<int>>();
+
+            if(root == null)
+            {
+                return result;
+            }
+
+            Queue<TreeNode> queue = new Queue<TreeNode>();
+            queue.Enqueue(root);
+            while(queue.Count > 0)
+            {
+                int size = queue.Count;
+                List<int> currentLevel = new List<int>();
+                for(var i = 0; i < size; i++)
+                {
+                    TreeNode currentNode = queue.Dequeue();
+                    currentLevel.Add(currentNode.val);
+                    if(currentNode.left != null)
+                    {
+                        queue.Enqueue(currentNode.left);
+                    }
+                    if(currentNode.right != null)
+                    {
+                        
+                        queue.Enqueue(currentNode.right);
+                    }
+                }
+
+                result.Add(currentLevel);
+            }
+
+            return result; 
+        }
     }
 }
