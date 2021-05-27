@@ -8,16 +8,31 @@ namespace AlgosAndDataStructures
     {
         static void Main(string[] args)
         {
-            TreeInOrder treeInOrder = new TreeInOrder();
+            TreeNode treeNode = new TreeNode(val: 1, left: new TreeNode(val: 5, new TreeNode(val: 5)), right: new TreeNode(val: 3, null, new TreeNode(val: 6)));
 
-            IList<int> inOrderTraversal = treeInOrder.InorderTraversal(new TreeNode(val: 1, left: new TreeNode(val: 5, new TreeNode(val: 5)), right: new TreeNode(val: 3, null, new TreeNode(val: 6))));
-
-            for (var i = 0; i < inOrderTraversal.Count; i++)
-            {
-                //should be 5, 5, 1, 3, 6
-                Console.Write("{0}, ", inOrderTraversal[i]);
-            }
+            Tree tree = new Tree();
             
+            void printNodes(IList<int> nodes)
+            {
+                foreach (int val in nodes)
+                {
+                    if (val == nodes[nodes.Count - 1])
+                    {
+                        Console.WriteLine($"{val}");
+                    }
+                    else Console.Write($"{val}, ");
+                };
+            }
+
+            IList<int> treeNodesInOrder = tree.InorderTraversal(treeNode);
+
+            IList<int> treeNodesPreOrder = tree.PreorderTraversal(treeNode);
+
+            IList<int> treeNodesPostOrder = tree.PostorderTraversal(treeNode);
+
+            printNodes(treeNodesInOrder);
+            printNodes(treeNodesPreOrder);
+            printNodes(treeNodesPostOrder);
         }
     }
 }

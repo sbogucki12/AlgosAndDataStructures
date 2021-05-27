@@ -12,7 +12,7 @@ namespace AlgosAndDataStructures.trees
         //Given the root of a binary tree, return the inoder traversal of its nodes' values
         //Inorder: 1. Traverse left subtree. 2. Visit root. 3. Traverse right subtree. 
         int counter = 0;
-        int rightCounter = 0; 
+        int rightCounter = 0;
 
         public IList<int> InorderTraversal(TreeNode root)
         {

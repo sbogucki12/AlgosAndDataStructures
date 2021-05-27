@@ -2,23 +2,27 @@
 
 ## May 26, 2021
 
+<p>Building out the tree class</p>
+<p><img src="https://raw.githubusercontent.com/sbogucki12/AlgosAndDataStructures/main/readmeImages/tree0.jpg" /></p>
+<p><img src="https://raw.githubusercontent.com/sbogucki12/AlgosAndDataStructures/main/readmeImages/tree1.jpg" /></p>
+
 <p>Binary Tree, Post-Order Traversal:</p>
 
-<img src="https://raw.githubusercontent.com/sbogucki12/AlgosAndDataStructures/main/readmeImages/postOrder.jpg" />
+<p><img src="https://raw.githubusercontent.com/sbogucki12/AlgosAndDataStructures/main/readmeImages/postOrder.jpg" /></p>
 
 
 ## May 24, 2021
 
 <p>Binary Tree, In-Order Traversal:</p>
 
-<img src="https://raw.githubusercontent.com/sbogucki12/AlgosAndDataStructures/main/readmeImages/binaryDebug.jpg" />
+<p><img src="https://raw.githubusercontent.com/sbogucki12/AlgosAndDataStructures/main/readmeImages/binaryDebug.jpg" /></p>
 
 
 ## May 22, 2021
 
 <p>Binary Tree, Pre-Order Traversal:</p>
 
-<img src="https://raw.githubusercontent.com/sbogucki12/AlgosAndDataStructures/main/readmeImages/treePreOrder.jpg" />
+<p><img src="https://raw.githubusercontent.com/sbogucki12/AlgosAndDataStructures/main/readmeImages/treePreOrder.jpg" /></p>
 
 
 
