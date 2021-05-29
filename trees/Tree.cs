@@ -123,5 +123,18 @@ namespace AlgosAndDataStructures.trees
 
             return result; 
         }
+
+        public int MaxDepth(TreeNode root)
+        {
+            if (root == null)
+            {
+                return 0;
+            };
+
+            int leftCount = MaxDepth(root.left) + 1;
+            int rightCount = MaxDepth(root.right) + 1;
+
+            return Math.Max(leftCount, rightCount);
+        }
     }
 }

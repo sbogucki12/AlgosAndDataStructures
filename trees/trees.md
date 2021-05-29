@@ -1,4 +1,10 @@
-﻿## Pre-order Traversal
+﻿##Recursion
+
+<p><i>Per <a href="https://leetcode.com/explore/learn/card/data-structure-tree/17/solve-problems-recursively/534/" target="_blank">leetcode</a>:
+
+
+
+## Pre-order Traversal
 
 <ol>
 <li>Visit root.</li>

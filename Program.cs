@@ -40,6 +40,12 @@ namespace AlgosAndDataStructures
                     }
             }
 
+            void printMaxDepth(TreeNode node)
+            {
+                Console.WriteLine();
+                Console.WriteLine(tree.MaxDepth(node));
+            }
+
             IList<int> treeNodesInOrder = tree.InorderTraversal(treeNode);
 
             IList<int> treeNodesPreOrder = tree.PreorderTraversal(treeNode);
@@ -52,6 +58,8 @@ namespace AlgosAndDataStructures
             printNodes(treeNodesPreOrder);
             printNodes(treeNodesPostOrder);
             printNodesBFS(treeNodesBFS);
+            printMaxDepth(treeNode);
+
         }
     }
 }

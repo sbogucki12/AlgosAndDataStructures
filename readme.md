@@ -1,5 +1,11 @@
 ﻿This is a repository to store solutions to various coding challenges, as I complete them. 
 
+## May 28, 2021
+
+<p>Get Maximum Depth:</p>
+
+<p><img src="https://raw.githubusercontent.com/sbogucki12/AlgosAndDataStructures/main/readmeImages/maxDepth.jpg" /></p>
+
 ## May 27, 2021
 
 <p>Level Order Traversal</p>
