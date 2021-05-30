@@ -1,5 +1,12 @@
 ﻿This is a repository to store solutions to various coding challenges, as I complete them. 
 
+## May 30, 2021
+
+<p>Get Maximum Depth:</p>
+
+<p><img src="https://raw.githubusercontent.com/sbogucki12/AlgosAndDataStructures/main/readmeImages/isSymmetric.jpg" /></p>
+
+
 ## May 28, 2021
 
 <p>Get Maximum Depth:</p>

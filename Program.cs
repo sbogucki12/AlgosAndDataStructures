@@ -8,7 +8,7 @@ namespace AlgosAndDataStructures
     {
         static void Main(string[] args)
         {
-            TreeNode treeNode = new TreeNode(val: 1, left: new TreeNode(val: 5, new TreeNode(val: 5)), right: new TreeNode(val: 3, null, new TreeNode(val: 6)));
+            TreeNode treeNode = new TreeNode(val: 1, left: new TreeNode(val: 2, new TreeNode(val: 3)), right: new TreeNode(val: 2, null, new TreeNode(val: 3)));
 
             Tree tree = new Tree();
             
@@ -44,8 +44,9 @@ namespace AlgosAndDataStructures
             {
                 Console.WriteLine();
                 Console.WriteLine(tree.MaxDepth(node));
-            }
-
+            }                
+           
+  
             IList<int> treeNodesInOrder = tree.InorderTraversal(treeNode);
 
             IList<int> treeNodesPreOrder = tree.PreorderTraversal(treeNode);
@@ -59,6 +60,7 @@ namespace AlgosAndDataStructures
             printNodes(treeNodesPostOrder);
             printNodesBFS(treeNodesBFS);
             printMaxDepth(treeNode);
+            Console.WriteLine($"Is the tree symmetric? {tree.IsSymmetric(treeNode)}");
 
         }
     }

@@ -92,28 +92,28 @@ namespace AlgosAndDataStructures.trees
         {
             List<IList<int>> result = new List<IList<int>>();
 
-            if(root == null)
+            if (root == null)
             {
                 return result;
             }
 
             Queue<TreeNode> queue = new Queue<TreeNode>();
             queue.Enqueue(root);
-            while(queue.Count > 0)
+            while (queue.Count > 0)
             {
                 int size = queue.Count;
                 List<int> currentLevel = new List<int>();
-                for(var i = 0; i < size; i++)
+                for (var i = 0; i < size; i++)
                 {
                     TreeNode currentNode = queue.Dequeue();
                     currentLevel.Add(currentNode.val);
-                    if(currentNode.left != null)
+                    if (currentNode.left != null)
                     {
                         queue.Enqueue(currentNode.left);
                     }
-                    if(currentNode.right != null)
+                    if (currentNode.right != null)
                     {
-                        
+
                         queue.Enqueue(currentNode.right);
                     }
                 }
@@ -121,7 +121,7 @@ namespace AlgosAndDataStructures.trees
                 result.Add(currentLevel);
             }
 
-            return result; 
+            return result;
         }
 
         public int MaxDepth(TreeNode root)
@@ -135,6 +135,31 @@ namespace AlgosAndDataStructures.trees
             int rightCount = MaxDepth(root.right) + 1;
 
             return Math.Max(leftCount, rightCount);
+        }
+
+        public bool IsSymmetric(TreeNode root)
+        {
+            if (root == null)
+            {
+                return true;
+            }
+
+            return IsSymmetric(root.left, root.right);
+
+            bool IsSymmetric(TreeNode left, TreeNode right)
+            {
+                if (left == null || right == null)
+                {
+                    return left == right;
+                };
+
+                if (left.val != right.val)
+                {
+                    return false;
+                };
+
+                return IsSymmetric(left.left, right.right) && IsSymmetric(left.right, right.left);
+            }
         }
     }
 }
