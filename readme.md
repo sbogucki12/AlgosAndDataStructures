@@ -1,5 +1,16 @@
 ﻿This is a repository to store solutions to various coding challenges, as I complete them. 
 
+
+## June 1, 2021
+
+<p><b>Path Sum:</b></p>
+
+<p><i>Determine if there is a path from root to leaf node with values that sum up to match the given integer.</i></p>
+
+<p><img src="https://raw.githubusercontent.com/sbogucki12/AlgosAndDataStructures/main/readmeImages/pathSum.jpg" /></p>
+
+
+
 ## May 30, 2021
 
 <p>Get Maximum Depth:</p>

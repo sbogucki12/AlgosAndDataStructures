@@ -161,5 +161,29 @@ namespace AlgosAndDataStructures.trees
                 return IsSymmetric(left.left, right.right) && IsSymmetric(left.right, right.left);
             }
         }
+
+        public bool HasPathSum(TreeNode root, int targetSum)
+        {
+            if (root == null)
+            {
+                return false;
+            };
+
+            if (root.left == null && root.right == null)
+            {
+                if (targetSum - root.val == 0)
+                {
+                    return true;
+                }
+
+                return false;
+            }
+            else if (HasPathSum(root.left, targetSum - root.val) || HasPathSum(root.right, targetSum - root.val))
+            {
+                return true;
+            }
+
+            return false;
+        }
     }
 }

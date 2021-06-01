@@ -61,7 +61,8 @@ namespace AlgosAndDataStructures
             printNodesBFS(treeNodesBFS);
             printMaxDepth(treeNode);
             Console.WriteLine($"Is the tree symmetric? {tree.IsSymmetric(treeNode)}");
-
+            bool result = tree.HasPathSum(treeNode, 6);
+            Console.WriteLine($"Is 6 a valid path sum? {result}");
         }
     }
 }
