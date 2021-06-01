@@ -7,7 +7,7 @@
 
 <p><i>Determine if there is a path from root to leaf node with values that sum up to match the given integer.</i></p>
 
-<p><img src="https://raw.githubusercontent.com/sbogucki12/AlgosAndDataStructures/main/readmeImages/pathSum.jpg" /></p>
+<p><img src="https://raw.githubusercontent.com/sbogucki12/AlgosAndDataStructures/main/readmeImages/pathSum.PNG" /></p>
 
 
 
