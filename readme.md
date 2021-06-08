@@ -1,6 +1,16 @@
 ﻿This is a repository to store solutions to various coding challenges, as I complete them. 
 
 
+
+## June 7, 2021
+
+
+<p><i>Constructing a binary tree from two provided integer arrays (one containing the inorder traversal of a binary tree and the other, the postorder traversal of the same tree).</i></p>
+
+<p><img src="https://raw.githubusercontent.com/sbogucki12/AlgosAndDataStructures/main/readmeImages/constructTree.jpg" /></p>
+
+
+
 ## June 1, 2021
 
 <p><b>Path Sum:</b></p>

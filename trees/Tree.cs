@@ -185,5 +185,49 @@ namespace AlgosAndDataStructures.trees
 
             return false;
         }
+
+        public TreeNode BuildTree(int[] inorder, int[] postorder)
+        {
+            //inorder (left, root, right)
+            //postorder (left, right, root)
+            //return binary tree           
+            // Input: inorder = [9,3,15,20,7], postorder = [9,15,7,20,3]
+
+            //root = 3
+
+            //int root = postorder[postorder.Length - 1];
+
+            //everything left of three is left subtree
+            //[9,3,15,20,7]
+            //9 is left subtree
+
+            //everything right of three is right subtree
+            //[9,3,15,20,7]
+            //15, 20, 7 is right subtree
+
+            return helper(postorder, inorder, postorder.Length - 1, 0, inorder.Length - 1);
+
+
+            TreeNode helper(int[] postOrder, int[] inOrder, int postIndex, int start, int end)
+            {
+                TreeNode root = null;
+
+                if (postIndex >= 0)
+                {
+                    for (int i = start; i <= end; i++)
+                    {
+                        if (inOrder[i] == postOrder[postIndex])
+                        {
+                            root = new TreeNode(inOrder[i]);
+                            root.right = helper(postOrder, inOrder, postIndex - 1, i + 1, end);
+                            root.left = helper(postOrder, inOrder, postIndex - 2 - end + i + 1, start, i - 1);
+                        }
+                    }
+                }
+
+                return root;
+            }
+
+        }
     }
 }
