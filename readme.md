@@ -2,6 +2,15 @@
 
 
 
+
+## June 28, 2021
+
+
+<p><i>Constructing a binary tree from two provided integer arrays (one containing the preorder traversal of a binary tree and the other, the inorder traversal of the same tree).</i></p>
+
+<p><img src="https://raw.githubusercontent.com/sbogucki12/AlgosAndDataStructures/main/readmeImages/bst_fromInorderPreorder.jpg" /></p>
+
+
 ## June 7, 2021
 
 

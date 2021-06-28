@@ -186,7 +186,7 @@ namespace AlgosAndDataStructures.trees
             return false;
         }
 
-        public TreeNode BuildTree(int[] inorder, int[] postorder)
+        public TreeNode BuildTreeInAndPost(int[] inorder, int[] postorder)
         {
             //inorder (left, root, right)
             //postorder (left, right, root)
@@ -206,7 +206,6 @@ namespace AlgosAndDataStructures.trees
             //15, 20, 7 is right subtree
 
             return helper(postorder, inorder, postorder.Length - 1, 0, inorder.Length - 1);
-
 
             TreeNode helper(int[] postOrder, int[] inOrder, int postIndex, int start, int end)
             {
@@ -228,6 +227,42 @@ namespace AlgosAndDataStructures.trees
                 return root;
             }
 
+        }
+
+        public TreeNode BuildTreePreAndIn(int[] preorder, int[] inorder)
+        {
+            //preorder array 
+            //inorder array
+            //constuct binary tree
+
+            //pre = root, left, right
+            //in = left, root, right
+
+            return helper(0, 0, inorder.Length - 1, preorder, inorder);
+
+            TreeNode helper(int preorderRoot, int inorderStart, int inorderEnd, int[] preorder, int[] inorder)
+            {
+                if(preorderRoot > preorder.Length - 1 || inorderStart > inorderEnd)
+                {
+                    return null; 
+                }
+
+                TreeNode root = new TreeNode(preorder[preorderRoot]);
+
+                int inorderIndex = 0; 
+                for(int i = inorderStart; i <= inorderEnd; i++)
+                {
+                    if(root.val == inorder[i])
+                    {
+                        inorderIndex = i; 
+                    }
+                };
+
+                root.left = helper(preorderRoot + 1, inorderStart, inorderIndex - 1, preorder, inorder);
+                root.right = helper(preorderRoot + inorderIndex - inorderStart + 1, inorderIndex + 1, inorderEnd, preorder, inorder);
+
+                return root;
+            }        
         }
     }
 }
