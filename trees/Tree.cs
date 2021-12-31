@@ -237,6 +237,11 @@ namespace AlgosAndDataStructures.trees
 
             //pre = root, left, right
             //in = left, root, right
+            /*Dictionary<int, int> inorderDictionary = new Dictionary<int, int>(); 
+            for(int i = 0; i < inorder.Length; i++)
+            {
+                inorderDictionary.Add(inorder[i], i);
+            }*/
 
             return helper(0, 0, inorder.Length - 1, preorder, inorder);
 
@@ -256,13 +261,36 @@ namespace AlgosAndDataStructures.trees
                     {
                         inorderIndex = i; 
                     }
-                };
+                };                
 
                 root.left = helper(preorderRoot + 1, inorderStart, inorderIndex - 1, preorder, inorder);
                 root.right = helper(preorderRoot + inorderIndex - inorderStart + 1, inorderIndex + 1, inorderEnd, preorder, inorder);
 
                 return root;
             }        
+        }
+
+        public Node Connect(Node root)
+        {
+            /*root = root = [1,2,3,4,5,6,7]
+                   1 
+            /             \
+           2               3
+          / \            /   \
+         4   5           6    7    
+        / \  /\         / \  / \
+       8  9 10 11      12 13 14 15
+              
+            result = 1, null, 2, 3, null, 4, 5, 6, 7, null, 8, 9, 10, 11, 12, 13, 14, 15, null
+            *1+1 =null, *2+1 =null, *4+1 =null, *8+1=null
+            */
+
+            //if val is *1+1, or *2+1, or *4+1, etc, .next = null; 
+            
+
+
+            
+
         }
     }
 }
