@@ -84,5 +84,31 @@ namespace AlgosAndDataStructures.challenges
 
             return "NO";
         }
+
+        public static int birthday(List<int> s, int d, int m)
+        {
+            //loop through indexes
+            //add m indexes at each iteration
+            //check if d - sum == 0
+            //if so increment  count
+
+            int count = 0;
+            int sum = 0; 
+
+            for(int i = 0; i < s.Count - m; i++)
+            {
+                for(int j = 0; j <= m; j++)
+                {
+                    sum += s[j];
+                }
+
+                if(d - sum == 0)
+                {
+                    count++;
+                }
+            }
+
+            return count; 
+        }
     };
 }

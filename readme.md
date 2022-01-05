@@ -1,6 +1,9 @@
 ﻿This is a repository to store solutions to various coding challenges, as I complete them. 
 
+## January 5, 2022
 
+<p>Completed HackerRank SubArray "Birthday" challenge.</p>
+<p><img src="https://pbs.twimg.com/media/FIW96T4VEAEne8c?format=jpg&name=small" /></p>
 
 
 ## June 28, 2021
