@@ -1,5 +1,9 @@
 ﻿This is a repository to store solutions to various coding challenges, as I complete them. 
 
+## January 6, 2022
+<p>Completed HackerRank Divisble Sum Pairs challenge.</p>
+<p><img src="https://pbs.twimg.com/media/FId0h2FUUAAyYWQ?format=jpg&name=small"/></p>
+
 ## January 5, 2022
 
 <p>Completed HackerRank SubArray "Birthday" challenge.</p>
