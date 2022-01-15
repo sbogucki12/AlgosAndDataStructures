@@ -120,7 +120,7 @@ namespace AlgosAndDataStructures.challenges
 
         public static int divisibleSumPairs(int n, int k, List<int> ar)
         {
-            ar.Sort();
+            
             int result = 0;
             // loop through the array, adding index "i" to
             // index "j" next to it. 
@@ -137,6 +137,47 @@ namespace AlgosAndDataStructures.challenges
                 }
             }
             return result;
+        }
+
+        public static int getTotalX(List<int> a, List<int> b)
+        {
+
+            // every element in a has to be a factor of the integer
+            // the integer has to be a factor of every element in b
+
+            // first multiply all the elements in a
+            // check if that number and every number from it to the smallest
+            // in b are factors all of the elements in b
+            
+            int count = 0;
+            try
+            {
+                int product = a[0];
+                for (int i = 0; i < a.Count; i++)
+                {
+                    for (int j = i + 1; j < a.Count; j++)
+                    {
+                        product *= a[j];
+                    }
+                };
+
+                b.Sort();
+                int sum = b.Sum();
+
+                for (int i = product; i <= b[0]; i++)
+                {
+                    if (sum % i == 0)
+                    {
+                        count++;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+
+            return count; 
         }
     };
 }
