@@ -270,27 +270,6 @@ namespace AlgosAndDataStructures.trees
             }        
         }
 
-        public Node Connect(Node root)
-        {
-            /*root = root = [1,2,3,4,5,6,7]
-                   1 
-            /             \
-           2               3
-          / \            /   \
-         4   5           6    7    
-        / \  /\         / \  / \
-       8  9 10 11      12 13 14 15
-              
-            result = 1, null, 2, 3, null, 4, 5, 6, 7, null, 8, 9, 10, 11, 12, 13, 14, 15, null
-            *1+1 =null, *2+1 =null, *4+1 =null, *8+1=null
-            */
-
-            //if val is *1+1, or *2+1, or *4+1, etc, .next = null; 
-            
-
-
-            
-
-        }
+        
     }
 }
