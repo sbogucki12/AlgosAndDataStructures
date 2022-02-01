@@ -8,32 +8,32 @@ namespace AlgosAndDataStructures.challenges.InterviewCake
 {
     internal class Solution
     {
-        public static List<int> MergeRanges(List<Meeting> meetings)
+        public static List<Meeting> MergeRanges(List<Meeting> meetings)
         {
-            int meetingLowest = ShowMin(meetings);
-            int meetingHighest = ShowMax(meetings);
-            List<int> result = new List<int>();
-
-            foreach(var meeting in meetings)
+            var sortedMeetings = meetings.Select(m => new Meeting(m.StartTime, m.EndTime))
+                .OrderBy(m => m.StartTime).ToList();
+            var mergedMeetings = new List<Meeting> { sortedMeetings[0] };
+            foreach (var currentMeeting in sortedMeetings)
             {
-                while(result.Count == 0)
+                var lastMergedMeeting = mergedMeetings.Last();
+
+                if (currentMeeting.StartTime <= lastMergedMeeting.EndTime)
                 {
-                    if (meeting.StartTime >= meetingLowest)
-                    {
-                        result.Add(meeting.StartTime);
-                    }
+                    // If the current meeting overlaps with the last merged meeting, use the
+                    // later end time of the two
+                    lastMergedMeeting.EndTime =
+                        Math.Max(lastMergedMeeting.EndTime, currentMeeting.EndTime);
                 }
 
-                if(meeting.EndTime >= meetingHighest)
+                else
                 {
-
+                    // Add the current meeting since it doesn't overlap
+                    mergedMeetings.Add(currentMeeting);
                 }
-              
-                
+
             }
-            
-            return result;
-            
+            return mergedMeetings;
+
         }
 
         public static int ShowMin(List<Meeting> meetings)
