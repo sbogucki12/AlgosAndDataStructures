@@ -79,22 +79,51 @@ namespace AlgosAndDataStructures
             //Console.WriteLine($"The most sighted bird of {string.Join(", ", birdSightings)} is {result}"); 
             //Console.ReadLine();
             //var meetings = new List<Meeting> { new Meeting(0, 1), new Meeting(3, 5), new Meeting(4, 8), new Meeting(10, 12), new Meeting(9, 10) };
-            var meetings = new List<Meeting> { new Meeting(0, 1), new Meeting(3, 5), new Meeting(4, 8), new Meeting(10, 12), new Meeting(9, 10) };
+            //var meetings = new List<Meeting> { new Meeting(0, 1), new Meeting(3, 5), new Meeting(4, 8), new Meeting(10, 12), new Meeting(9, 10) };
             //meetings.Sort((x, y) => x.StartTime.CompareTo(y.StartTime));
             //foreach(var meeting in meetings)
             //{
             //    Console.WriteLine(meeting);
             //}
             //Console.ReadLine();
-            
+
             //var lowestMeeting = Solution.ShowMin(meetings);
             //var highestMeeting = Solution.ShowMax(meetings);
-            var mergedRanges = Solution.MergeRanges(meetings);
-            foreach (var meeting in mergedRanges)
+            //var mergedRanges = Solution.MergeRanges(meetings);
+            //foreach (var meeting in mergedRanges)
+            //{
+            //    Console.WriteLine(meeting);
+            //}
+            //Console.ReadLine();
+
+            static char[] ReverseString(char[] stringToReverse)
             {
-                Console.WriteLine(meeting);
+                int leftIndex = 0; 
+                int rightIndex = stringToReverse.Length - 1;
+
+                while(leftIndex < rightIndex)
+                {
+                    char temp = stringToReverse[leftIndex];
+                    stringToReverse[leftIndex] = stringToReverse[rightIndex];
+                    stringToReverse[rightIndex] = temp;
+                    leftIndex++;
+                    rightIndex--;
+                }
+
+                
+                return stringToReverse;
             }
-            Console.ReadLine();
+
+            var a = new char[] { 't', 'g', 'h', 't', 'f', 'v', 'q' };
+            ReverseString(a);
+
+            foreach(char c in a)
+            {
+                Console.WriteLine(c);
+            }
+
+            Console.ReadLine();         
+
 
 
         }
