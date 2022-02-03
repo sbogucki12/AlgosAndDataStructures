@@ -2,6 +2,7 @@
 using AlgosAndDataStructures.challenges.InterviewCake;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace AlgosAndDataStructures
 {
@@ -109,7 +110,6 @@ namespace AlgosAndDataStructures
                     leftIndex++;
                     rightIndex--;
                 }
-
                 
                 return stringToReverse;
             }
@@ -117,12 +117,64 @@ namespace AlgosAndDataStructures
             var a = new char[] { 't', 'g', 'h', 't', 'f', 'v', 'q' };
             ReverseString(a);
 
-            foreach(char c in a)
+            static int MultiplyExponentially(int baseNumber, int exponent)
             {
-                Console.WriteLine(c);
+                int i = 0;
+                int originalBase = baseNumber;
+                while(i < exponent - 1)
+                {
+                    baseNumber *= originalBase;
+                    i++;
+                }
+
+                return baseNumber;
+            }
+            
+            static int[] GetInput()
+            {
+                int[] result = new int[] { 0, 0 };
+
+                Console.Write("Enter Base: ");
+                var baseNumberString = Console.ReadLine();
+                if (int.TryParse(baseNumberString, out int baseNumberInt))
+                {
+                    result[0] = baseNumberInt;
+                }
+                else
+                {
+                    Console.WriteLine($"{baseNumberString} is not a number");
+                }
+                Console.Write("Enter exponent: ");
+                var exponentString = Console.ReadLine();
+                if (int.TryParse(exponentString, out int exponentInt))
+                {
+                    result[1] = exponentInt;
+                }
+                else
+                {
+                    Console.WriteLine($"{exponentString} is not a number");
+                }                
+
+                return result; 
             }
 
-            Console.ReadLine();         
+
+
+            int[] input = GetInput();
+            
+
+            var result = MultiplyExponentially(input[0], input[1]);
+
+            Console.WriteLine($"result: {result}");
+            Console.ReadKey();
+
+
+            //foreach (char c in a)
+            //{
+            //    Console.WriteLine(c);
+            //}
+
+            //Console.ReadLine();         
 
 
 
