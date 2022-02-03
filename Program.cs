@@ -97,78 +97,112 @@ namespace AlgosAndDataStructures
             //}
             //Console.ReadLine();
 
-            static char[] ReverseString(char[] stringToReverse)
-            {
-                int leftIndex = 0; 
-                int rightIndex = stringToReverse.Length - 1;
+            //static char[] ReverseString(char[] stringToReverse)
+            //{
+            //    int leftIndex = 0; 
+            //    int rightIndex = stringToReverse.Length - 1;
 
-                while(leftIndex < rightIndex)
-                {
-                    char temp = stringToReverse[leftIndex];
-                    stringToReverse[leftIndex] = stringToReverse[rightIndex];
-                    stringToReverse[rightIndex] = temp;
-                    leftIndex++;
-                    rightIndex--;
-                }
+            //    while(leftIndex < rightIndex)
+            //    {
+            //        char temp = stringToReverse[leftIndex];
+            //        stringToReverse[leftIndex] = stringToReverse[rightIndex];
+            //        stringToReverse[rightIndex] = temp;
+            //        leftIndex++;
+            //        rightIndex--;
+            //    }
                 
-                return stringToReverse;
-            }
+            //    return stringToReverse;
+            //}
 
-            var a = new char[] { 't', 'g', 'h', 't', 'f', 'v', 'q' };
-            ReverseString(a);
+            //var a = new char[] { 't', 'g', 'h', 't', 'f', 'v', 'q' };
+            //ReverseString(a);
 
-            static int MultiplyExponentially(int baseNumber, int exponent)
-            {
-                int i = 0;
-                int originalBase = baseNumber;
-                while(i < exponent - 1)
-                {
-                    baseNumber *= originalBase;
-                    i++;
-                }
+            //static int MultiplyExponentially(int baseNumber, int exponent)
+            //{
+            //    int i = 0;
+            //    int originalBase = baseNumber;
+            //    while(i < exponent - 1)
+            //    {
+            //        baseNumber *= originalBase;
+            //        i++;
+            //    }
 
-                return baseNumber;
-            }
+            //    return baseNumber;
+            //}
             
-            static int[] GetInput()
+            //static int[] GetMultiplyExponentiallyInput()
+            //{
+            //    int[] result = new int[] { 0, 0 };
+
+            //    Console.Write("Enter Base: ");
+            //    var baseNumberString = Console.ReadLine();
+            //    if (int.TryParse(baseNumberString, out int baseNumberInt))
+            //    {
+            //        result[0] = baseNumberInt;
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine($"{baseNumberString} is not a number");
+            //    }
+            //    Console.Write("Enter exponent: ");
+            //    var exponentString = Console.ReadLine();
+            //    if (int.TryParse(exponentString, out int exponentInt))
+            //    {
+            //        result[1] = exponentInt;
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine($"{exponentString} is not a number");
+            //    }                
+
+            //    return result; 
+            //}
+
+            static int[] GetAsciiConverterInput()
             {
-                int[] result = new int[] { 0, 0 };
+                int[] result = new int[] { 0, 0, 0, 0, 0, 0, 0, 0 };
 
-                Console.Write("Enter Base: ");
-                var baseNumberString = Console.ReadLine();
-                if (int.TryParse(baseNumberString, out int baseNumberInt))
+                Console.Write("Enter Binary: ");
+                var binary = Console.ReadLine();
+                for(int i = 0; i < binary.Length; i++)
                 {
-                    result[0] = baseNumberInt;
+                    result[i] = binary[i];
                 }
-                else
-                {
-                    Console.WriteLine($"{baseNumberString} is not a number");
-                }
-                Console.Write("Enter exponent: ");
-                var exponentString = Console.ReadLine();
-                if (int.TryParse(exponentString, out int exponentInt))
-                {
-                    result[1] = exponentInt;
-                }
-                else
-                {
-                    Console.WriteLine($"{exponentString} is not a number");
-                }                
 
-                return result; 
+                return result;
             }
 
 
+            int[] AsciiConverterInput = GetAsciiConverterInput();
+            //int[] multiplyExponentiallyInput = GetMultiplyExponentiallyInput();
 
-            int[] input = GetInput();
-            
+            var AsciiConverterResult = AsciiConverter(AsciiConverterInput);
+            //var multiplyExponentiallyResult = MultiplyExponentially(multiplyExponentiallyInput[0], multiplyExponentiallyInput[1]);
 
-            var result = MultiplyExponentially(input[0], input[1]);
-
-            Console.WriteLine($"result: {result}");
+            //Console.WriteLine($"result: {multiplyExponentiallyResult}");
+            Console.WriteLine($"result: {AsciiConverterResult}");
             Console.ReadKey();
 
+            static int AsciiConverter(int[] binary)
+            {
+                binary[6] *= 2;
+                binary[5] *= 4;
+                binary[4] *= 8;
+                binary[3] *= 16;
+                binary[2] *= 32;
+                binary[1] *= 64;
+                binary[0] *= 256;
 
+                int result = 0; 
+
+                foreach(var bit in binary)
+                {
+                    result += bit;
+                }
+
+                return result; 
+                
+            }
             //foreach (char c in a)
             //{
             //    Console.WriteLine(c);
