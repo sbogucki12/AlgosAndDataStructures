@@ -1,5 +1,6 @@
 ﻿using AlgosAndDataStructures.challenges;
 using AlgosAndDataStructures.challenges.InterviewCake;
+using AlgosAndDataStructures.classes;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -110,7 +111,7 @@ namespace AlgosAndDataStructures
             //        leftIndex++;
             //        rightIndex--;
             //    }
-                
+
             //    return stringToReverse;
             //}
 
@@ -129,7 +130,7 @@ namespace AlgosAndDataStructures
 
             //    return baseNumber;
             //}
-            
+
             //static int[] GetMultiplyExponentiallyInput()
             //{
             //    int[] result = new int[] { 0, 0 };
@@ -158,57 +159,97 @@ namespace AlgosAndDataStructures
             //    return result; 
             //}
 
-            static int[] GetAsciiConverterInput()
-            {
-                int[] result = new int[] { 0, 0, 0, 0, 0, 0, 0, 0 };
-
-                Console.Write("Enter Binary: ");
-                var binary = Console.ReadLine();
-                for(int i = 0; i < binary.Length; i++)
-                {
-                    result[i] = binary[i];
-                }
-
-                return result;
-            }
+            //static int[] GetAsciiConverterInput()
+            //{
+            //    int[] result = new int[] { 0, 0, 0, 0, 0, 0, 0, 0 };
 
 
-            int[] AsciiConverterInput = GetAsciiConverterInput();
-            //int[] multiplyExponentiallyInput = GetMultiplyExponentiallyInput();
+            //    Console.Write("Enter Binary: ");
+            //    var read = Console.ReadLine();
+            //    int i = 0; 
+            //    foreach(var bit in read)
+            //    {
+            //        result[i] = bit;
+            //        i++; 
+            //    };
 
-            var AsciiConverterResult = AsciiConverter(AsciiConverterInput);
-            //var multiplyExponentiallyResult = MultiplyExponentially(multiplyExponentiallyInput[0], multiplyExponentiallyInput[1]);
+            //    return result;
+            //}
 
-            //Console.WriteLine($"result: {multiplyExponentiallyResult}");
-            Console.WriteLine($"result: {AsciiConverterResult}");
-            Console.ReadKey();
 
-            static int AsciiConverter(int[] binary)
-            {
-                binary[6] *= 2;
-                binary[5] *= 4;
-                binary[4] *= 8;
-                binary[3] *= 16;
-                binary[2] *= 32;
-                binary[1] *= 64;
-                binary[0] *= 256;
+            //int[] AsciiConverterInput = GetAsciiConverterInput();
+            ////int[] multiplyExponentiallyInput = GetMultiplyExponentiallyInput();
 
-                int result = 0; 
+            //var AsciiConverterResult = AsciiConverter(AsciiConverterInput);
+            ////var multiplyExponentiallyResult = MultiplyExponentially(multiplyExponentiallyInput[0], multiplyExponentiallyInput[1]);
 
-                foreach(var bit in binary)
-                {
-                    result += bit;
-                }
+            ////Console.WriteLine($"result: {multiplyExponentiallyResult}");
+            //Console.WriteLine($"result: {AsciiConverterResult}");
+            //Console.ReadKey();
 
-                return result; 
-                
-            }
+            //static int AsciiConverter(int[] binary)
+            //{
+            //    binary[6] *= 2;
+            //    binary[5] *= 4;
+            //    binary[4] *= 8;
+            //    binary[3] *= 16;
+            //    binary[2] *= 32;
+            //    binary[1] *= 64;
+            //    binary[0] *= 256;
+
+            //    int result = 0; 
+
+            //    foreach(var bit in binary)
+            //    {
+            //        result += bit;
+            //    }
+
+            //    return result; 
+
+            //}
             //foreach (char c in a)
             //{
             //    Console.WriteLine(c);
             //}
 
             //Console.ReadLine();         
+            //char[] message = { 'c', 'a', 'k', 'e', ' ',
+            //       'p', 'o', 'u', 'n', 'd', ' ',
+            //       's', 't', 'e', 'a', 'l'};
+
+            //char[] message = new char[] { 't', 'h', 'e', ' ', 'e', 'a', 'g', 'l', 'e', ' ', 'h', 'a', 's', ' ', 'l', 'a', 'n', 'd', 'e', 'd' };
+            //var results = Solution.ReverseWords(message);
+            //foreach(char result in results)
+            //{
+            //    Console.WriteLine(result);
+            //}
+            ////Console.WriteLine(results);
+            //Console.ReadKey();
+
+            //int target = 9; 
+            int[] numbers = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };
+            Console.WriteLine("Enter target:  ");
+            if (!int.TryParse(Console.ReadLine(), out int target))
+            {
+                Console.WriteLine("Invalid value entered");
+                return;
+            }
+            else
+            {
+                Console.WriteLine("You entered {0}", target);
+            }
+
+            var result = Solution.BinarySearch(target, numbers);
+            string isOrIsNot = "is";
+            if(!result.IsInList)
+            {
+                isOrIsNot = "is not";
+            }
+            
+            Console.ReadKey();
+            Console.WriteLine($"{target} {isOrIsNot} in the list! It took {result.Count} tries to determine this.");
+            Console.ReadKey();
+
 
 
 

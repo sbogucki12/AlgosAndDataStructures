@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AlgosAndDataStructures.classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -62,6 +63,129 @@ namespace AlgosAndDataStructures.challenges.InterviewCake
             newMeetingList.Sort();
 
             return (newMeetingList[newMeetingList.Count - 1]);
+        }
+
+        public static char[] ReverseWords(char[] message)
+        {
+
+            //char[] into string[]
+            //all the chars until 21 == string
+            //StringBuilder word = new StringBuilder(); 
+            //List<string> newMessage = new List<string>();
+            //int j = 0;
+            //for (int i = 0; i < 3; i++)
+            //{
+                
+            //    while(message[j] != 32)
+            //    {
+            //        word.Append(message[j]);
+            //        j++;
+            //    }
+               
+            //    newMessage.Add(word.ToString());
+            //}
+
+
+            int leftIndex = 0;
+            int rightIndex = message.Length - 1;
+            List<int> indexesOfEmptyQuotes = new List<int>();
+            for (int i = 0; i < message.Length; i++)
+            {
+                if (message[i] == 32)
+                {
+                    indexesOfEmptyQuotes.Add(i);
+                }
+            }
+
+            ////this is unnecessary.  I'm just trying something
+            //List<string> charsIntoStrings = new List<string>();
+            //int counter = 0; 
+
+            //for(int i = 0; i < message.Length; i++)
+            //{
+            //    int index = indexesOfEmptyQuotes[counter];
+            //    StringBuilder temp = new StringBuilder();
+            //    while(i != index)
+            //    {
+            //        temp.Append(message[i]);
+            //        i++;
+            //        counter++;
+            //    }
+                
+            //    charsIntoStrings.Add(temp.ToString());
+
+            //}
+
+
+
+            // first word is all chars until indexesOfEmptyQuotes[0]
+            // second word is all chars until indexesOfEmptyQuotes[1]
+
+            while (leftIndex < rightIndex)
+            {
+                char temp = message[leftIndex];
+                message[leftIndex] = message[rightIndex];
+                message[rightIndex] = temp;
+                leftIndex++;
+                rightIndex--;
+            }
+
+            return message; 
+        }
+
+        public static BinarySearchResult BinarySearch(int target, int[] nums)
+        {
+            // See if target appears in nums
+            // count is number of iterations through the int[] 
+            // return true if target appears in nums, and count
+            // return false if target does not appear in nums,and count
+
+            // We think of floorIndex and ceilingIndex as "walls" around
+            // the possible positions of our target so by -1 below we mean
+            // to start our wall "to the left" of the 0th index
+            // (we *don't* mean "the last index")
+            int floorIndex = -1;
+            int ceilingIndex = nums.Length;
+            int count = 0;
+            BinarySearchResult result = new BinarySearchResult() { Count = count, IsInList = true };
+
+            // If there isn't at least 1 index between floor and ceiling,
+            // we've run out of guesses and the number must not be present
+            while (floorIndex + 1 < ceilingIndex)
+            {
+                // Find the index ~halfway between the floor and ceiling.
+                // We use integer division, so we'll never get a "half index".
+                int distance = ceilingIndex - floorIndex;
+                int halfDistance = distance / 2;
+                int guessIndex = floorIndex + halfDistance;
+                
+                int guessValue = nums[guessIndex];
+                
+
+                if (guessValue == target)
+                {
+                    result.Count = count;
+                    result.IsInList = true; 
+                    return result;
+                }
+
+                if (guessValue > target)
+                {
+                    // Target is to the left, so move ceiling to the left
+                    count++;
+                    ceilingIndex = guessIndex;
+                }
+                else
+                {
+                    // Target is to the right, so move floor to the right
+                    count++;
+                    floorIndex = guessIndex;
+                }
+            }
+
+            result.Count = count;
+            result.IsInList = false; 
+            return result;
         }
     }
 }
