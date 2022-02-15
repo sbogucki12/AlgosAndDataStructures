@@ -227,30 +227,34 @@ namespace AlgosAndDataStructures
             //Console.ReadKey();
 
             //int target = 9; 
-            int[] numbers = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };
-            Console.WriteLine("Enter target:  ");
-            if (!int.TryParse(Console.ReadLine(), out int target))
-            {
-                Console.WriteLine("Invalid value entered");
-                return;
-            }
-            else
-            {
-                Console.WriteLine("You entered {0}", target);
-            }
+            //int[] numbers = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };
+            //Console.WriteLine("Enter target:  ");
+            //if (!int.TryParse(Console.ReadLine(), out int target))
+            //{
+            //    Console.WriteLine("Invalid value entered");
+            //    return;
+            //}
+            //else
+            //{
+            //    Console.WriteLine("You entered {0}", target);
+            //}
 
-            var result = Solution.BinarySearch(target, numbers);
-            string isOrIsNot = "is";
-            if(!result.IsInList)
-            {
-                isOrIsNot = "is not";
-            }
-            
+            //var result = Solution.BinarySearch(target, numbers);
+            //string isOrIsNot = "is";
+            //if(!result.IsInList)
+            //{
+            //    isOrIsNot = "is not";
+            //}
+
+            //Console.ReadKey();
+            //Console.WriteLine($"{target} {isOrIsNot} in the list! It took {result.Count} tries to determine this.");
+            //Console.ReadKey();
+
+            int[] myArray = { 3, 4, 6, 10, 11, 15 };
+            int[] alicesArray = { 1, 5, 8, 12, 14, 19 };
+
+            Console.WriteLine($"[{string.Join(", ", Solution.MergeArrays(myArray, alicesArray))}]");
             Console.ReadKey();
-            Console.WriteLine($"{target} {isOrIsNot} in the list! It took {result.Count} tries to determine this.");
-            Console.ReadKey();
-
-
 
 
         }

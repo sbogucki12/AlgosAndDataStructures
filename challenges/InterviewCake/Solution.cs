@@ -187,5 +187,28 @@ namespace AlgosAndDataStructures.challenges.InterviewCake
             result.IsInList = false; 
             return result;
         }
+
+        public static int[] MergeArrays(int[] arr0, int[] arr1)
+        {
+            int length = arr0.Length + arr1.Length;
+            int[] result = new int[length];
+            for(int i = 0; i < arr0.Length; i++)
+            {
+                for(int j = i + 1; j < arr1.Length; j++)
+                {
+                    if(arr0[i] <= arr1[j])
+                    {
+                        result[i] = arr0[i];
+                    }
+                    else 
+                    {
+                        result[i] = arr1[i];
+                    }
+                }
+            }
+
+            return result;
+
+        }
     }
 }
