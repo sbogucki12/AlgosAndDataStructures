@@ -188,27 +188,41 @@ namespace AlgosAndDataStructures.challenges.InterviewCake
             return result;
         }
 
-        public static int[] MergeArrays(int[] arr0, int[] arr1)
+        public static int[] MergeSortedArrays(int[] arr0, int[] arr1)
         {
-            int length = arr0.Length + arr1.Length;
-            int[] result = new int[length];
-            for(int i = 0; i < arr0.Length; i++)
+            
+
+            return MergeArrays(arr0, arr1);
+        }
+
+        public static int[] MergeArrays(int[] myArray, int[] alicesArray)
+        {
+            // Make an array big enough to fit the elements from both arrays
+            var mergedArray = new int[myArray.Length + alicesArray.Length];
+
+            int indexOfMyArray = 0;
+            int indexOfAlicesArray = 0;
+            int indexOfMergedArray = 0; 
+
+            while(indexOfMergedArray < mergedArray.Length)
             {
-                for(int j = i + 1; j < arr1.Length; j++)
+                
+                if(indexOfMyArray >= myArray.Length || myArray[indexOfMyArray] > alicesArray[indexOfAlicesArray])
                 {
-                    if(arr0[i] <= arr1[j])
-                    {
-                        result[i] = arr0[i];
-                    }
-                    else 
-                    {
-                        result[i] = arr1[i];
-                    }
+                    mergedArray[indexOfMergedArray] = alicesArray[indexOfAlicesArray];
+                    indexOfAlicesArray++;
                 }
-            }
+                else if (indexOfAlicesArray >= alicesArray.Length || myArray[indexOfMyArray] < alicesArray[indexOfAlicesArray])
+                {
+                    mergedArray[indexOfMergedArray] = myArray[indexOfMyArray];
+                    indexOfMyArray++;
+                }               
 
-            return result;
+                indexOfMergedArray++;
+            }            
 
+            // Eventually we'll want to return the merged array
+            return mergedArray;
         }
     }
 }
