@@ -252,7 +252,11 @@ namespace AlgosAndDataStructures.challenges.InterviewCake
                         //servedOrders[j + 1] - server
                         int[] temp = new int[servedOrders.Length - (j + 1)];
                         Array.Copy(servedOrders, j + 1, temp, 0, servedOrders.Length - (j + 1));
-
+                        //check if takeOutOrders{i + 1] is in temp
+                        for(int k = 0; k < temp.Length; k++)
+                        {
+                            
+                        }
                     }
                 }
             }
