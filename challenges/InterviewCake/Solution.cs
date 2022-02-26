@@ -227,41 +227,46 @@ namespace AlgosAndDataStructures.challenges.InterviewCake
 
         public static bool IsFirstComeFirstServed(int[] takeoutOrders, int[] dineinOrders, int[] servedOrders)
         {
-            // need to return true if the numbers in servedOrders
-            // are sorted in the same order as they are sorted in 
-            // takeoutOrders and dineinOrders
-
-            //int[] takeoutOrders = { 1x, 3x, 5x };
-            // return false if we make it all the way through served orders
-            //int[] dineinOrders = { 2x, 4x, 6 }; 
-
-            //int[] servedOrders = { 1, 2, 6, 4, 3, 5 }; 
-
-            // checking for takeoutOrders[i]
-            // find it in servedOrders[j]
-            // check for takeoutOrders[i + 1] in servedOrders[j + 1] through servedOrders.length
-            // if no takeOrders[i + 1] return false
-
+                        
             for(int i = 0; i < takeoutOrders.Length; i++)
-            {
+            {                 
                 for(int j = 0; j < servedOrders.Length; j++)
                 {
-                    if(takeoutOrders[i] == servedOrders[j])
+                    if(j == servedOrders.Length || (i == takeoutOrders.Length && j < servedOrders.Length))
                     {
-                        //check if i + 1 is in j+1 through serverOrders.length
-                        //servedOrders[j + 1] - server
-                        int[] temp = new int[servedOrders.Length - (j + 1)];
-                        Array.Copy(servedOrders, j + 1, temp, 0, servedOrders.Length - (j + 1));
-                        //check if takeOutOrders{i + 1] is in temp
-                        for(int k = 0; k < temp.Length; k++)
+                        return false; 
+                    }
+
+                    if(i < takeoutOrders.Length - 1 && j < servedOrders.Length - 1)
+                    {
+                        if (takeoutOrders[i + 1] == servedOrders[j + 1])
                         {
-                            
+                            i++;
                         }
                     }
+                    
                 }
             }
 
-            
+            for (int i = 0; i < dineinOrders.Length; i++)
+            {
+                for (int j = 0; j < servedOrders.Length; j++)
+                {
+                    if (j == servedOrders.Length || (i == dineinOrders.Length && j < servedOrders.Length))
+                    {
+                        return false;
+                    }
+
+                    if (i < dineinOrders.Length - 1 && j < servedOrders.Length - 1)
+                    {
+                        if (dineinOrders[i + 1] == servedOrders[j + 1])
+                        {
+                            i++;
+                        }
+                    }
+
+                }
+            }
 
             return true; 
 

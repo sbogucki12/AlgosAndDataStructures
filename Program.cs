@@ -262,7 +262,7 @@ namespace AlgosAndDataStructures
 
 
 
-            var result = Solution.IsFirstComeFirstServed(takeoutOrders, dineinOrders, servedOrdersTrue);
+            var result = Solution.IsFirstComeFirstServed(takeoutOrders, dineinOrders, servedOrdersFalse);
             Console.WriteLine("Are the orders being served correctly?");
             Console.WriteLine(result);
             Console.ReadKey();
