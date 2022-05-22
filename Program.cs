@@ -267,21 +267,42 @@ namespace AlgosAndDataStructures
             //Console.WriteLine(result);
             //Console.ReadKey();
 
-            int[] stockPrices = { 10, 7, 5, 8, 11, 9 };
-            int maxProfit;
-            try                
-            {
-                maxProfit = Solution.GetMaxProfit(stockPrices);
-                Console.WriteLine($"The maximum profit you could have made is {maxProfit}");
-                Console.ReadLine();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("There was an error: " + ex.Message);
-                Console.ReadLine();
-            }
+            //int[] stockPrices = { 10, 7, 5, 8, 11, 9 };
+            //int maxProfit;
+            //try                
+            //{
+            //    maxProfit = Solution.GetMaxProfit(stockPrices);
+            //    Console.WriteLine($"The maximum profit you could have made is {maxProfit}");
+            //    Console.ReadLine();
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine("There was an error: " + ex.Message);
+            //    Console.ReadLine();
+            //}
+
+            Console.WriteLine("Please enter 5 single digit integers.");
+            
+
+            int userNumber0 = int.Parse(Console.ReadLine());
+            int userNumber1 = int.Parse(Console.ReadLine()); 
+            int userNumber2 = int.Parse(Console.ReadLine());
+            int userNumber3 = int.Parse(Console.ReadLine()); 
+            int userNumber4 = int.Parse(Console.ReadLine()); 
+
+            int[] userArray = new int[5] { userNumber0, userNumber1, userNumber2, userNumber3, userNumber4 };
 
             
+            Console.WriteLine($"{userNumber0}, {userNumber1}, {userNumber2}, {userNumber3}, {userNumber4}");
+            Console.ReadKey();
+
+            Console.WriteLine("Calculating...");
+            int highestProduct = Solution.GetHighestProduct(userArray);
+            Console.WriteLine($"The highest product that you can get from these numbers is: {highestProduct}");
+            Console.ReadKey();
+
+
+
 
 
 

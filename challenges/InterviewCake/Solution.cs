@@ -232,26 +232,46 @@ namespace AlgosAndDataStructures.challenges.InterviewCake
 
         //}
 
-        public static int GetMaxProfit(int[] stockPrices)
-        {
-            int minPrice = stockPrices[0];
-            int maxProfit = 0;
+        //public static int GetMaxProfit(int[] stockPrices)
+        //{
+        //    int minPrice = stockPrices[0];
+        //    int maxProfit = 0;
 
-            foreach (int currentPrice in stockPrices)
-            {
+        //    foreach (int currentPrice in stockPrices)
+        //    {
                 
-                // Ensure minPrice is the lowest price we've seen so far
-                minPrice = Math.Min(minPrice, currentPrice);
+        //        // Ensure minPrice is the lowest price we've seen so far
+        //        minPrice = Math.Min(minPrice, currentPrice);
 
-                // See what our profit would be if we bought at the
-                // min price and sold at the current price
-                int potentialProfit = currentPrice - minPrice;
+        //        // See what our profit would be if we bought at the
+        //        // min price and sold at the current price
+        //        int potentialProfit = currentPrice - minPrice;
 
-                // Update maxProfit if we can do better
-                maxProfit = Math.Max(maxProfit, potentialProfit);
+        //        // Update maxProfit if we can do better
+        //        maxProfit = Math.Max(maxProfit, potentialProfit);
+        //    }
+
+        //    return maxProfit;
+        //}
+
+        public static int GetHighestProduct(int[] integers)
+        {
+            if(integers.Length <= 2)
+            {
+                throw new ArgumentException();
             }
 
-            return maxProfit;
+            if(integers.Length == 3)
+            {
+                return integers[0] * integers[1] * integers[2];
+            }
+
+            Array.Sort(integers); 
+            Array.Reverse(integers);
+            //Console.WriteLine($"Sorted integers: {integers[0]}, {integers[1]}, {integers[2]}, {integers[3]}, {integers[4]}");
+            int highestProduct = integers[0] * integers[1] * integers[2];
+            
+            return highestProduct; 
         }
     }
 }
