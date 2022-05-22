@@ -1,0 +1,15 @@
+C:\Users\sbogu\Documents\Repos\AlgosAndDataStructures\AlgosAndDataStructures\bin\Debug\net6.0\AlgosAndDataStructures.exe
+C:\Users\sbogu\Documents\Repos\AlgosAndDataStructures\AlgosAndDataStructures\bin\Debug\net6.0\AlgosAndDataStructures.deps.json
+C:\Users\sbogu\Documents\Repos\AlgosAndDataStructures\AlgosAndDataStructures\bin\Debug\net6.0\AlgosAndDataStructures.runtimeconfig.json
+C:\Users\sbogu\Documents\Repos\AlgosAndDataStructures\AlgosAndDataStructures\bin\Debug\net6.0\AlgosAndDataStructures.dll
+C:\Users\sbogu\Documents\Repos\AlgosAndDataStructures\AlgosAndDataStructures\bin\Debug\net6.0\AlgosAndDataStructures.pdb
+C:\Users\sbogu\Documents\Repos\AlgosAndDataStructures\AlgosAndDataStructures\obj\Debug\net6.0\AlgosAndDataStructures.csproj.AssemblyReference.cache
+C:\Users\sbogu\Documents\Repos\AlgosAndDataStructures\AlgosAndDataStructures\obj\Debug\net6.0\AlgosAndDataStructures.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sbogu\Documents\Repos\AlgosAndDataStructures\AlgosAndDataStructures\obj\Debug\net6.0\AlgosAndDataStructures.AssemblyInfoInputs.cache
+C:\Users\sbogu\Documents\Repos\AlgosAndDataStructures\AlgosAndDataStructures\obj\Debug\net6.0\AlgosAndDataStructures.AssemblyInfo.cs
+C:\Users\sbogu\Documents\Repos\AlgosAndDataStructures\AlgosAndDataStructures\obj\Debug\net6.0\AlgosAndDataStructures.csproj.CoreCompileInputs.cache
+C:\Users\sbogu\Documents\Repos\AlgosAndDataStructures\AlgosAndDataStructures\obj\Debug\net6.0\AlgosAndDataStructures.dll
+C:\Users\sbogu\Documents\Repos\AlgosAndDataStructures\AlgosAndDataStructures\obj\Debug\net6.0\refint\AlgosAndDataStructures.dll
+C:\Users\sbogu\Documents\Repos\AlgosAndDataStructures\AlgosAndDataStructures\obj\Debug\net6.0\AlgosAndDataStructures.pdb
+C:\Users\sbogu\Documents\Repos\AlgosAndDataStructures\AlgosAndDataStructures\obj\Debug\net6.0\AlgosAndDataStructures.genruntimeconfig.cache
+C:\Users\sbogu\Documents\Repos\AlgosAndDataStructures\AlgosAndDataStructures\obj\Debug\net6.0\ref\AlgosAndDataStructures.dll

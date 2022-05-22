@@ -255,17 +255,34 @@ namespace AlgosAndDataStructures
 
             //Console.WriteLine($"[{string.Join(", ", Solution.MergeArrays(myArray, alicesArray))}]");
             //Console.ReadKey();
-            int[] takeoutOrders = { 1, 3, 5 };
-            int[] dineinOrders = { 2, 4, 6 };
-            int[] servedOrdersTrue = { 1, 2, 4, 6, 3, 5 };
-            int[] servedOrdersFalse = { 5, 2, 6, 4, 3, 1 };
+            //int[] takeoutOrders = { 1, 3, 5 };
+            //int[] dineinOrders = { 2, 4, 6 };
+            //int[] servedOrdersTrue = { 1, 2, 4, 6, 3, 5 };
+            //int[] servedOrdersFalse = { 5, 2, 6, 4, 3, 1 };
 
 
 
-            var result = Solution.IsFirstComeFirstServed(takeoutOrders, dineinOrders, servedOrdersFalse);
-            Console.WriteLine("Are the orders being served correctly?");
-            Console.WriteLine(result);
-            Console.ReadKey();
+            //var result = Solution.IsFirstComeFirstServed(takeoutOrders, dineinOrders, servedOrdersFalse);
+            //Console.WriteLine("Are the orders being served correctly?");
+            //Console.WriteLine(result);
+            //Console.ReadKey();
+
+            int[] stockPrices = { 10, 7, 5, 8, 11, 9 };
+            int maxProfit;
+            try                
+            {
+                maxProfit = Solution.GetMaxProfit(stockPrices);
+                Console.WriteLine($"The maximum profit you could have made is {maxProfit}");
+                Console.ReadLine();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("There was an error: " + ex.Message);
+                Console.ReadLine();
+            }
+
+            
+
 
 
         }
